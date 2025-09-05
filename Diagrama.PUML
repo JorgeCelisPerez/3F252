@@ -1,2 +1,73 @@
-sudo apt update
-sudo 
+@startuml
+class Juego
+class Nivel
+class Ronda
+class Puntaje
+class Tiempo
+class Velocimetro
+class Colision
+
+class Vehiculo
+class AutoJugador
+class AutoEnemigo
+class Camion
+class Moto
+class Policia
+
+class Motor
+class Rueda
+class Freno
+class Transmision
+class Carroceria
+class TanqueGasolina
+class Nitro
+
+class Carretera
+class Carril
+class Interseccion
+class Clima
+class Obstaculo
+class SenalTrafico
+class Gasolinera
+
+class ControladorEntrada
+class MotorGrafico
+class MotorSonido
+
+
+AutoJugador --|> Vehiculo
+AutoEnemigo --|> Vehiculo
+Camion --|> Vehiculo
+Moto --|> Vehiculo
+Policia --|> Vehiculo
+
+Vehiculo *-- Motor
+Vehiculo *-- Rueda
+Vehiculo *-- Freno
+Vehiculo *-- Transmision
+Vehiculo *-- Carroceria
+Vehiculo *-- TanqueGasolina
+
+Juego *-- Nivel
+Juego *-- Puntaje
+Juego *-- Tiempo
+Juego *-- Ronda
+
+Carretera *-- Carril
+Carretera *-- Interseccion
+Carretera *-- Obstaculo
+Carretera *-- SenalTrafico
+Carretera *-- Gasolinera
+
+Juego --> MotorGrafico
+Juego --> MotorSonido
+Juego --> ControladorEntrada
+Juego --> Carretera
+Juego --> Velocimetro
+Juego --> Clima
+
+AutoJugador --> Nitro
+
+Colision --> Vehiculo
+Colision --> Obstaculo
+@enduml
