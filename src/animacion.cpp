@@ -35,15 +35,15 @@ int main()
     const std::vector<std::u32string> coche1 = {
         U"     ______",
         U" ___/_____|_\\___",
-        U"|_          _|",
-        U"  O--------O"};
+        U"|_              _|",
+        U"  O------------O"};
 
     // Camión
     const std::vector<std::u32string> camion = {
         U"     __________________",
         U" ___/   |_________|_\\___",
         U"|_              ____    _|",
-        U"  O--------------O"};
+        U"  O-------------------O"};
 
     // Motocicleta
     const std::vector<std::u32string> moto = {
